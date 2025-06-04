@@ -1,0 +1,408 @@
+/* =================== VARIABLES GLOBALES =================== */
+:root {
+    --color-primary: #9c0410;
+    --color-secondary: #4e4e4e;
+    --color-accent: #a6a6a6;
+    --color-bg: #f1faee;
+    --color-surface: #ffffff;
+    --color-text: #ffffff;
+    --color-border: #dee2e6;
+    --radius: 1rem;
+    --shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    --shadow-hover: 0 12px 32px rgba(0, 0, 0, 0.25);
+}
+
+/* =================== BODY Y FONDO =================== */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #181414, #070404);
+    animation: gradientMove 15s ease infinite;
+    background-size: 400% 400%;
+    color: var(--color-text);
+}
+
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* =================== LOGIN WRAPPER =================== */
+.login-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 2rem;
+}
+
+/* =================== LOGIN CARD =================== */
+.login-card {
+    background: linear-gradient(135deg, var(--color-surface), #f8f9fa);
+    padding: 3rem;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    max-width: 400px;
+    width: 100%;
+    animation: fadeIn 0.8s ease-in-out both;
+    position: relative;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+/* =================== TITULO =================== */
+.login-card h3 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: var(--color-primary);
+    font-weight: 700;
+}
+
+/* =================== FORMULARIO =================== */
+fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+legend {
+    font-size: 1rem;
+    color: var(--color-secondary);
+    font-weight: 600;
+    margin-bottom: 1.2rem;
+    text-align: center;
+}
+
+/* =================== INPUTS =================== */
+.login-input {
+    display: block;
+    width: 100%;
+    padding: 0.9rem 1.2rem;
+    margin-bottom: 1.2rem;
+    font-size: 1rem;
+    border: 2px solid var(--color-border);
+    border-radius: var(--radius);
+    transition: all 0.3s ease;
+    background-color: #fff;
+}
+
+.login-input:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 4px rgba(230, 57, 70, 0.2);
+}
+
+/* =================== BOTÓN DE LOGIN =================== */
+.login-button {
+    display: flex;
+    align-items: center;      
+    margin: 1rem auto;        
+    width: 50%;
+    height: 5rem;           
+    border: none;
+    color: #fff;
+    font-size: 8rem;        
+    font-weight: 700;
+    border-radius: var(--radius);
+    cursor: pointer;
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+}
+
+
+.login-button:hover {
+    transform: scale(1.05);
+    box-shadow: var(--shadow-hover);
+    background: linear-gradient(135deg, var(--color-accent), var(--color-secondary));
+}
+
+/* =================== FLASH MESSAGES =================== */
+.message {
+    padding: 1rem 1.5rem;
+    border-radius: var(--radius);
+    background-color: #ffe5e5;
+    border-left: 6px solid var(--color-primary);
+    color: var(--color-primary);
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    animation: slideIn 0.4s ease;
+}
+
+@keyframes slideIn {
+    from { opacity: 0; transform: translateX(-20px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+.login-input {
+    background-color: #ffffff !important;
+    color: #000; /* Texto negro para contraste */
+}
+
+
+/* ======= COLORES BASE ======= */
+:root {
+    --rojo: #9c0410;
+    --gris-claro: #726c6c;
+    --gris-oscuro: #3b3232;
+    --blanco: #ffffff;
+    --azul: #495058;
+    --sombra: rgb(0, 0, 0);
+}
+
+/* ======= NAVBAR ======= */
+.top-nav {
+
+    background: linear-gradient(90deg, var(--rojo));
+    padding: 0.8rem 2rem;
+    box-shadow: 0 4px 6px var(--sombra);
+    border-bottom: 3px solid var(--gris-claro);
+}
+
+.big-brand {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--blanco);
+    letter-spacing: 1px;
+    transition: transform 0.3s;
+}
+
+.big-brand:hover {
+    transform: scale(1.05);
+}
+.user-name {
+    font-size: 1.2rem;
+    font-style: unset;
+    color: var(--gris-claro);
+    opacity: 1.2;
+}
+.user-name strong {
+    color: var(--rojo);
+    font-weight: 600;
+}
+
+.logout-btn {
+    background-color: var(--rojo);
+    color: var(--blanco);
+    border: none;
+    transition: background-color 0.3s ease;
+    font-size: 1.6rem;         
+    padding: 0.6rem 1.2rem;  
+    border-radius: 0.5rem;
+}
+
+.logout-btn:hover {
+    background-color: var(--gris-oscuro);
+}
+.display-4 {
+    font-family: 'Georgia', serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--color-accent);
+    border-bottom: 3px solid var(--rojo);
+    display: inline-block;
+    padding-bottom: 0.2rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+/* ======= TARJETAS AJUSTADAS ======= */
+.cards-container .card {
+    min-height: 180px;
+    padding: 1.2rem 1rem;
+    border-radius: 1rem;
+    background: linear-gradient(145deg, var(--gris-claro), var(--blanco));
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1), 0 3px 6px var(--sombra);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.cards-container .card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15), 0 4px 10px rgba(0, 0, 0, 0.05);
+    background: linear-gradient(145deg, var(--blanco), var(--gris-claro));
+}
+
+/* ======= TITULO DE TARJETA ======= */
+.card-title {
+    font-size: 2.2rem;
+    font-weight: bold;
+    margin-bottom: 0.4rem;
+    color: var(--sombra);
+    text-shadow: 0.5px 0.5px 1px #ccc;
+}
+
+/* ======= TEXTO DE TARJETA ======= */
+.card-text {
+    font-size: 1.5rem;
+    color: #161414;
+    padding: 0 0.8rem;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .cards-container .card {
+        min-height: 150px;
+        padding: 1rem;
+    }
+
+    .card-title {
+        font-size: 1.1rem;
+    }
+
+    .card-text {
+        font-size: 0.85rem;
+    }
+}
+/* =================== TABLAS =================== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    color: var(--blanco); /* texto blanco */
+    
+}
+/* Fondo de todo el formulario */
+form {
+    background-color: #111; /* Oscuro elegante */
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.2);
+    color: #fff;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* Estilo para etiquetas */
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+/* Inputs, selects, textareas */
+input[type="text"],
+input[type="number"],
+input[type="datetime-local"],
+select,
+textarea {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    background-color: #ffffff;
+    color: #090909;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Inputs enfocados */
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #007bff; /* Azul */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.6);
+    outline: none;
+}
+
+/* Inputs deshabilitados o solo lectura */
+input[disabled],
+input[readonly],
+select[disabled] {
+    background-color: #f0f0f0;
+    color: #0c0c0c;
+    opacity: 1;
+    cursor: not-allowed;
+}
+
+/* Botones */
+button,
+input[type="submit"] {
+    background-color: #ff3b3b; /* Rojo */
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover,
+input[type="submit"]:hover {
+    background-color: #e60000;
+}
+
+/* Mensajes o títulos del formulario */
+h2, h3, h4 {
+    color: #ffffff;
+    border-left: 5px solid #007bff;
+    padding-left: 0.75rem;
+    margin-bottom: 1rem;
+}
+.card-user-view {
+    width: 90%;
+    max-width: 1200px;
+    background-color: #1a1a1a;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.3);
+    color: #fff;
+    padding: 2rem;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.card-user-view .username-title {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    color: #ffffff;
+    border-left: 6px solid #007bff;
+    padding-left: 1rem;
+}
+
+.user-info-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.user-info-table th,
+.user-info-table td {
+    padding: 1rem;
+    text-align: left;
+}
+
+.user-info-table th {
+    background-color: #2c2c2c;
+    color: #ff3b3b;
+    width: 40%;
+}
+
+.user-info-table td {
+    background-color: #333;
+    color: #fff;
+    border-bottom: 1px solid #444;
+}
+
+.user-info-table tr:last-child td {
+    border-bottom: none;
+}
+.white-text {
+    color: white;
+    background-color: transparent; /* o el color que combine con tu fondo */
+}
+
+.white-text::-webkit-calendar-picker-indicator {
+    filter: invert(1); /* Para que el icono del calendario también se vea blanco */
+}
+input[type="date"].form-control.white-text {
+    color: white;
+    background-color: #343a40; /* oscuro */
+    border: 1px solid #fff;
+}

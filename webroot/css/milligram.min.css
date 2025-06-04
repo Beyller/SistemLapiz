@@ -1,0 +1,418 @@
+/* -------------------- FUENTES -------------------- */
+@font-face {
+    font-family: 'cakefont';
+    src: url('../font/cakedingbats-webfont.eot');
+    src: url('../font/cakedingbats-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/cakedingbats-webfont.woff2') format('woff2'),
+         url('../font/cakedingbats-webfont.woff') format('woff'),
+         url('../font/cakedingbats-webfont.ttf') format('truetype'),
+         url('../font/cakedingbats-webfont.svg#cake_dingbatsregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* -------------------- RESET Y BASE -------------------- */
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    color: #f1f1f1;
+    background-color: #121212;
+    font-family: 'Roboto', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 300;
+    line-height: 1.6;
+    margin: 0;
+    padding: 60px 0;
+}
+
+/* -------------------- TIPOGRAFÍA -------------------- */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 400;
+    color: #fff;
+    margin-bottom: 2rem;
+}
+
+h1 { font-size: 4.6rem; }
+h2 { font-size: 3.6rem; }
+h3 { font-size: 2.8rem; }
+h4 { font-size: 2.2rem; }
+h5 { font-size: 1.8rem; }
+h6 { font-size: 1.6rem; }
+
+p {
+    margin-top: 0;
+}
+
+/* -------------------- ENLACES -------------------- */
+a {
+    color: #9c0410;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+a:hover,
+a:focus {
+    color: #ffffff;
+}
+
+/* -------------------- BOTONES -------------------- */
+.button,
+button,
+input[type='submit'],
+input[type='button'],
+input[type='reset'] {
+    background-color: #9c0410;
+    border: none;
+    border-radius: 0.5rem;
+    color: #fff;
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-transform: uppercase;
+}
+
+.button:hover,
+button:hover,
+input[type='submit']:hover {
+    background-color: #b0061a;
+}
+
+/* Botones deshabilitados */
+button[disabled],
+input[disabled] {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Outline y Clear */
+.button-outline {
+    background: transparent;
+    color: #9c0410;
+    border: 1px solid #9c0410;
+}
+.button-outline:hover {
+    background-color: #9c0410;
+    color: #fff;
+}
+
+.button-clear {
+    background: transparent;
+    color: #9c0410;
+    border: none;
+}
+.button-clear:hover {
+    color: #fff;
+}
+.column-column-80 {
+    max-width: 700px;
+    margin: auto;
+    padding: 2rem;
+    background-color: #181818;
+    border-radius: 2rem;
+    box-shadow: 0 0 10px rgba(156, 4, 16, 0.3);
+    color: #ffffff;
+}
+
+/* -------------------- FORMULARIOS -------------------- */
+form {
+    background-color: #1a1a1a;
+    padding: 2rem;
+    border-radius: 1rem;
+    max-width: 800px;
+    margin: 2rem auto;
+    box-shadow: 0 0 15px rgba(156, 4, 16, 0.2);
+    color: #ffffff;
+}
+
+label,
+legend {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: .5rem;
+    color: #ffffff;
+}
+
+input,
+textarea,
+select {
+    background-color: #2b2b2b;
+    color: #ffffff;
+    border: 1px solid #444;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    font-size: 1.4rem;
+    width: 100%;
+    margin-bottom: 1.5rem;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: #9c0410;
+    box-shadow: 0 0 5px rgba(156, 4, 16, 0.4);
+    outline: none;
+}
+
+textarea {
+    min-height: 10rem;
+    resize: vertical;
+}
+
+select {
+    background: #2b2b2b url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 8' width='30'><path fill='%239c0410' d='M0,0l6,8l6-8'/></svg>") no-repeat right center;
+    background-size: 12px;
+    padding-right: 3rem;
+    appearance: none;
+}
+
+input[disabled],
+textarea[disabled],
+select[disabled] {
+    background-color: #444;
+    color: #999;
+    cursor: not-allowed;
+}
+
+/* -------------------- TABLAS -------------------- */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 2rem;
+    background-color: #0d0b0b;
+    color: #fff;
+}
+
+th {
+    background-color: #000;
+    color: #9c0410;
+    text-transform: uppercase;
+    padding: 1rem;
+    text-align: left;
+    font-weight: bold;
+}
+
+td {
+    padding: 1rem;
+    text-align: left;
+    background-color: #111;
+}
+
+tr:nth-child(even) td {
+    background-color: #1a1a1a;
+}
+
+tr:hover td {
+    background-color: #2d2d2d;
+}
+
+td a {
+    color: #9c0410;
+    font-weight: bold;
+}
+td a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+/* -------------------- COMPONENTES DE DETALLE -------------------- */
+.detalle-contenedor {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #181818;
+    border-radius: 1rem;
+    box-shadow: 0 0 10px rgba(156, 4, 16, 0.3);
+}
+
+.titulo-registro {
+    font-size: 2.4rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    color: #ffffff;
+}
+
+.detalle-fila {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    border-bottom: 1px solid #333;
+}
+
+.detalle-fila:nth-child(even) {
+    background-color: #1e1e1e;
+}
+
+.detalle-label {
+    font-weight: bold;
+    color: #9c0410;
+    width: 40%;
+    text-transform: uppercase;
+}
+
+.detalle-valor {
+    width: 60%;
+    text-align: right;
+}
+
+@media (max-width: 768px) {
+    .detalle-fila {
+        flex-direction: column;
+    }
+
+    .detalle-label,
+    .detalle-valor {
+        width: 100%;
+        text-align: left;
+    }
+
+    .detalle-label {
+        margin-bottom: 0.5rem;
+    }
+}
+
+/* -------------------- UTILIDADES -------------------- */
+.text-center {
+    text-align: center;
+}
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.float-left {
+    float: left;
+}
+.float-right {
+    float: right;
+}
+hr {
+    border: 0;
+    border-top: 1px solid #444;
+    margin: 3rem 0;
+}
+blockquote {
+    border-left: 0.3rem solid #9c0410;
+    padding: 1rem 1.5rem;
+    background-color: #222;
+    color: #ccc;
+}
+pre {
+    background-color: #222;
+    color: #eee;
+    border-left: 0.3rem solid #9c0410;
+    padding: 1rem 1.5rem;
+    overflow-x: auto;
+}
+code {
+    background-color: #333;
+    color: #f1f1f1;
+    padding: 0.2rem 0.5rem;
+    border-radius: 0.4rem;
+    font-size: 1.3rem;
+}
+/* ----------- ESTILOS PARA FACTURAS ----------- */
+
+.factura-detalle {
+    max-width: 800px;
+    margin: 2rem auto;
+    background-color: #1a1a1a;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 20px rgba(156, 4, 16, 0.25);
+    color: #ffffff;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.factura-titulo {
+    font-size: 2.4rem;
+    color: #9c0410;
+    margin-bottom: 0.5rem;
+}
+
+.factura-encabezado {
+    text-align: center;
+    margin-bottom: 2rem;
+    line-height: 1.5;
+}
+
+.factura-encabezado p {
+    color: #ccc;
+    font-size: 1.4rem;
+}
+
+.factura-seccion {
+    margin-bottom: 2.5rem;
+}
+
+.factura-seccion h3 {
+    font-size: 1.8rem;
+    color: #9c0410;
+    border-bottom: 1px solid #9c0410;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.factura-seccion p {
+    margin: 0.3rem 0;
+    font-size: 1.5rem;
+}
+
+/* ----------- TABLAS DE FACTURA ----------- */
+.factura-tabla {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    font-size: 1.5rem;
+}
+
+.factura-tabla th,
+.factura-tabla td {
+    padding: 1rem;
+    border: 1px solid #333;
+    text-align: left;
+}
+
+.factura-tabla th {
+    background-color: #000;
+    color: #9c0410;
+    text-transform: uppercase;
+}
+
+.factura-tabla td {
+    background-color: #111;
+    color: #ffffff;
+}
+
+.factura-tabla tbody tr:nth-child(even) td {
+    background-color: #1a1a1a;
+}
+
+.detalle-repuestos td {
+    text-align: right;
+}
+
+.btn-volver {
+    margin-bottom: 2rem;
+    display: inline-block;
+}
+.side-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 3rem;
+    
+    
+}
+
+
+
